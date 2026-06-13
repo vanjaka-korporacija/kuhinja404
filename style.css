@@ -1,0 +1,171 @@
+/* --- KUHINJA 404 - KOMPLETNI CSS --- */
+
+@font-face {
+    font-family: 'ScriptMT';
+    src: url('ScriptMTBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Galdeano';
+    src: url('Galdeano-Regular.ttf') format('truetype');
+}
+
+/* Osnovni stil */
+body {
+    background-image: url('papir.jpg') !important;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Galdeano', sans-serif !important;
+    margin: 0;
+    display: flex;
+    color: #2c2c2c;
+}
+
+/* Sidebar */
+#sidebar {
+    width: 250px;
+    background-image: url('drvo.jpg') !important;
+    background-size: cover;
+    border-right: 8px double #2e2219;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+    box-shadow: 5px 0 15px rgba(0,0,0,0.6);
+}
+
+/* Naslovi i gumbi - ScriptMT */
+h1, h2, h3, .btn-kategorija {
+    font-family: 'ScriptMT', cursive !important;
+    text-transform: none !important;
+}
+
+h2 { 
+    color: #fdf5e6; 
+    text-shadow: 2px 2px 4px #000; 
+    text-align: center;
+    border-bottom: 2px dashed #a39373;
+    padding-bottom: 10px;
+}
+
+/* Gumbi */
+.btn-kategorija {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0;
+    background-color: #a39373;
+    border: 4px outset #c7b898;
+    cursor: pointer;
+    text-align: center;
+    color: #000;
+    font-size: 22px;
+}
+
+.btn-kategorija:hover { 
+    background-color: #bfa068; 
+    border-style: inset; 
+}
+
+/* Stil za utisnuti (aktivni) gumb */
+.btn-kategorija.active {
+    background-color: #7a6a4d !important;
+    border-style: inset !important;
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+/* Glavni sadržaj */
+#glavni-sadrzaj {
+    margin-left: 290px;
+    padding: 30px;
+    width: calc(100% - 320px);
+}
+
+.kategorija-sekcija { margin-bottom: 50px; }
+
+.kategorija-sekcija h3 {
+    background: #5d4d3a;
+    color: #fdf5e6;
+    padding: 10px 20px;
+    border: 2px solid #000;
+    font-family: 'ScriptMT', cursive !important;
+}
+
+/* Grid s receptima */
+.grid-recepti {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    border: 6px ridge #8c826b;
+    padding: 25px;
+    background-image: url('stolnjak.jpg') !important;
+    background-size: contain;
+}
+
+/* Kartice - Galdeano font */
+.kartica {
+    width: 200px;
+    background: #fdf5e6;
+    border: 2px solid #555;
+    padding: 15px;
+    flex-shrink: 0;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    box-shadow: 6px 6px 0px rgba(0,0,0,0.4);
+    transition: transform 0.2s;
+    font-family: 'Galdeano', sans-serif !important;
+}
+
+.kartica p {
+    font-size: 18px;
+    margin-top: 10px;
+    font-family: 'Galdeano', sans-serif !important;
+}
+
+.kartica:hover {
+    transform: rotate(-3deg) scale(1.05);
+    background: #fff;
+}
+
+.kartica img { 
+    width: 100%; 
+    height: 140px; 
+    object-fit: cover; 
+    border: 2px solid #333; 
+}
+
+/* --- DIZAJN ZA POJEDINAČNI RECEPT --- */
+.recept-stranica {
+    background-image: url('papir.jpg') !important;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Galdeano', sans-serif !important;
+    padding: 50px;
+    color: #2c2c2c;
+    min-height: 100vh;
+}
+
+.sadrzaj-recepta {
+    background: #fdf5e6;
+    border: 10px double #4a3728;
+    padding: 40px;
+    max-width: 700px;
+    margin: auto;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
+}
+
+.recept-slika {
+    width: 100%;
+    height: auto;
+    border: 2px solid #555;
+    filter: drop-shadow(8px 8px 10px rgba(0,0,0,0.6));
+    margin: 20px 0;
+}
+
+.sadrzaj-recepta h1 {
+    font-family: 'ScriptMT', cursive !important;
+    border-bottom: 3px solid #a02020;
+    text-transform: none;
+    font-size: 40px;
+    margin-bottom: 20px;
+}

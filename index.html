@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Kuhinja 404</title>
+</head>
+<body>
+
+<div id="sidebar">
+    <h2>Kuhinja 404</h2>
+    <div class="btn-kategorija" onclick="skrolaj('nema-vremena')">Nemam vremena</div>
+    <div class="btn-kategorija" onclick="skrolaj('tjedan-dana')">Traje tjedan</div>
+    <div class="btn-kategorija" onclick="skrolaj('predjela')">Predjela</div>
+    <div class="btn-kategorija" onclick="skrolaj('glavna-jela')">Glavna jela</div>
+    <div class="btn-kategorija" onclick="skrolaj('deserti')">Deserti</div>
+    <div class="btn-kategorija" onclick="skrolaj('profesionalci')">Profi</div>
+
+    <a href="/admin" class="btn-kategorija" style="margin-top: 50px; background-color: #8c2020; color: #fff; text-decoration: none; border-color: #5a1414;">Dodaj recept</a>
+</div>
+
+<div id="glavni-sadrzaj">
+    <div id="nema-vremena" class="kategorija-sekcija">
+        <h3>   Nemam vremena   </h3>
+        <div class="grid-recepti">
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
