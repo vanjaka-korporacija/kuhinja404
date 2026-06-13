@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Content Manager</title>
-  </head>
-  <body>
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Content Manager</title>
+</head>
+<body>
+  <script>
+    window.CMS_CONFIG = {
+      backend: {
+        name: "github",
+        repo: "vanjaka-korporacija/kuhinja404",
+        branch: "main"
+      },
+      media_folder: "images",
+      public_folder: "/images",
+      collections: [
+        {
+          name: "recepti",
+          label: "Recepti",
+          folder: "recepti",
+          create: true,
+          slug: "{{slug}}",
+          fields: [
+            {label: "Naslov", name: "title", widget: "string"},
+            {label: "Slika", name: "image", widget: "image"},
+            {label: "Sastojci", name: "sastojci", widget: "markdown"},
+            {label: "Postupak", name: "postupak", widget: "markdown"}
+          ]
+        }
+      ]
+    };
+  </script>
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+</body>
 </html>
