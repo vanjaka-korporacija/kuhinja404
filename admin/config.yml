@@ -1,0 +1,15 @@
+backend:
+  name: git-gateway
+  branch: main
+
+collections:
+  - name: recepti
+    label: "Recepti"
+    folder: "recepti"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Naslov", name: "title", widget: "string"}
+      - {label: "Slika", name: "image", widget: "image"}
+      - {label: "Sastojci", name: "sastojci", widget: "markdown"}
+      - {label: "Postupak", name: "postupak", widget: "markdown"}
