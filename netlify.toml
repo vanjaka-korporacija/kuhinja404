@@ -1,6 +1,0 @@
-[[plugins]]
-package = "netlify-cms-proxy-server"
-
-[build]
-publish = "/"
-command = "npm run build"
